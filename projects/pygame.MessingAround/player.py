@@ -23,9 +23,12 @@ class Player(pygame.sprite.Sprite):
                 self.vely += self.velycrement
                 self.velycrement += .05
             self.y = self.vely
-        print(gameObjects["ground"])
-        #if self.rect.collidelist(gameObjects["ground"][1]):
-            #print("aaa")
+        
+        if pressed[pygame.K_j]:
+            for object in gameObjects["ground"][0]:
+                print(object[1])
+            print(gameObjects["ground"][0][1])
+            
         groundCheck()
         self.rect = pygame.Rect(self.x,self.y,self.width,self.height)
         pygame.draw.rect(screen,self.color,self.rect)
