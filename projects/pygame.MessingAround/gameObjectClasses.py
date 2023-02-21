@@ -27,7 +27,7 @@ class Rectangle(pygame.Rect):
             ErrorMessage(f"Layer type of {self.objname} is unrecognizable! Unrecognized layer: {layer}", True)
         else:
             self.layer = layer
-        gameObjects[self.layer].append((self.objname, self.rect, self.color))
+        gameObjects[self.layer].append((self.objname, (self.rect.x,self.rect.y,self.rect.width,self.rect.height), self.color))
 class GameObjectHandler():
     def __init__(self):
         self.GameObjects = gameObjects

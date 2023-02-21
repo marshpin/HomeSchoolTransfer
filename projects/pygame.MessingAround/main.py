@@ -25,7 +25,7 @@ Rectangle(0,0,screenSize[0], screenSize[1], (12,12,12), "background", "backgroun
 Rectangle(50,50,28,28,(0,0,255), "background", "rect1")
 Rectangle(128,128,32,32,(255,0,255), "background", "rect2")
 Rectangle(200,200,16,16,(255,0,0), "ground", "rect3")
-Rectangle(100,150,64,64,(0,255,0), "background", "rect4")
+Rectangle(100,150,64,64,(0,255,0), "ground", "rect4")
 Rectangle(0, screenSize[1] - 70, screenSize[0], 70, (24,24,24), "ground", "groundblock")
 
 while gameLoop:
