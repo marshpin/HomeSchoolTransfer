@@ -12,7 +12,7 @@ class Player(pygame.sprite.Sprite):
         self.velx = 0
         self.vely = 0
         self.velycrement = .05
-    def update(self,screen):
+    def update(self,screen, gameObjects):
         pressed = pygame.key.get_pressed()
         if pressed[pygame.K_d]:
             self.x += 1
@@ -23,6 +23,9 @@ class Player(pygame.sprite.Sprite):
                 self.vely += self.velycrement
                 self.velycrement += .05
             self.y = self.vely
+        print(gameObjects["ground"])
+        #if self.rect.collidelist(gameObjects["ground"][1]):
+            #print("aaa")
         groundCheck()
         self.rect = pygame.Rect(self.x,self.y,self.width,self.height)
         pygame.draw.rect(screen,self.color,self.rect)
